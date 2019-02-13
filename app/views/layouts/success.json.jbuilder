@@ -1,3 +1,3 @@
 json.success true
 
-json.merge! JSON.parse yield
+json.data JSON.parse yield
