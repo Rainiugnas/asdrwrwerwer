@@ -14,6 +14,7 @@ class Token
   def valid?
     @valid ||= @data.present? && @data['expiration'].to_time >= Time.now
   end
+  def invalid?() valid? == false end
 
   def to_jwt() @jwt end
 
