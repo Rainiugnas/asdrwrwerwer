@@ -1,7 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Populate database from the extract
+
+def extract_data() @extract_data ||= JSON.parse File.read 'data/extract.json' end
+
+def places() extract_data['places'] end
+
+def create_places!
+  places.each { |place| Place.create name: place['name'] }
+end
+
+create_places!
