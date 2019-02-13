@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'google_places'
 
+gem 'jwt'
+
 group :production do
   # Use pg as the database for Active Record
   gem 'pg'
