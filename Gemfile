@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'google_places'
+
 group :production do
   # Use pg as the database for Active Record
   gem 'pg'
